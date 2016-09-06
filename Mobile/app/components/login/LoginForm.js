@@ -67,7 +67,7 @@ export class LoginForm extends React.Component {
   doLogin() {
     const {authClearErrors, doLogin} = this.props.actions;
     const {username, password} = this.state;
-    
+
     authClearErrors();
     doLogin(username, password);
   }
@@ -94,9 +94,6 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   buttonWrapper: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
   },
   button: {
     height: 40,
@@ -104,9 +101,6 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     marginTop: 20,
     marginBottom: 20,
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     width: 100
   },
   buttonText: {

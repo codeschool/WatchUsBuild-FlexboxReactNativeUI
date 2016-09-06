@@ -41,21 +41,15 @@ export class ProfileControls extends Component {
 
 const styles = StyleSheet.create({
   controls: {
-    flex: 1,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
   },
   icon: {
     borderColor: '#E3E7E7',
     borderWidth: 1,
     borderStyle: 'solid',
-    borderRadius: 100/2,
+    borderRadius: 50,
     width: 80,
     height: 80,
     backgroundColor: '#FFFFFF',
-    justifyContent: 'center',
-    alignItems: 'center'
   },
   iconPositive: {
 

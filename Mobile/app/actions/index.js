@@ -3,11 +3,11 @@ import * as ActionTypes from '../constants/action-types';
 
 export const doLogin = (username, password) => {
 
-  if (username === 'admin'  && password === 'admin') {
-    return {
-      type: ActionTypes.AUTH_LOGIN,
-    };
-  }
+  return {
+    type: ActionTypes.AUTH_LOGIN,
+  };
+  // if (username === 'admin'  && password === 'admin') {
+  // }
 
   return authError(true);
 }
