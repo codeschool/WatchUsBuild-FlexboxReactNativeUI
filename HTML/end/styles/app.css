@@ -1,0 +1,211 @@
+/* ************************************* */
+/*                                       */
+/*   App CSS                             */
+/*   -> One file to style them all       */
+/*                                       */
+/* ************************************* */
+
+/* ------------------------------------- */
+/*   Colors
+/* ------------------------------------- */
+
+/* background brownish: #2a1a12 */
+/* text: #99a6a7 */
+/* text featured: #8c546d */
+
+/* ------------------------------------- */
+/*   Global
+/* ------------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  align-items: center;
+  background: #2a1a12;
+  color: #99a6a7;
+  display: flex;
+  font-family: 'Milonga', cursive;
+  font-size: 18px;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #8c546d;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+/* ------------------------------------- */
+/*   Buttons
+/* ------------------------------------- */
+
+.btn {
+  background: #a4d7d3;
+  border-radius: 4px;
+  padding: 12px 0;
+  transition: background 0.25s linear
+}
+
+.btn:hover {
+  background: #c7e7e4;
+}
+
+/* ------------------------------------- */
+/*   Forms
+/* ------------------------------------- */
+
+form {
+  text-align: left;
+}
+
+input {
+  border: 0;
+  border-radius: 4px;
+  display: block;
+  font-family: 'Milonga', cursive;
+  font-size: 16px;
+  padding: 8px;
+  width: 100%;
+}
+
+input[type='submit'] {
+  display: block;
+  margin: 18px auto 0 auto;
+  width: 50%;
+}
+
+label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+fieldset {
+  border: 0;
+  padding: 5px 0;
+}
+
+/* ------------------------------------- */
+/*   Landing
+/* ------------------------------------- */
+
+.signin {
+  max-width: 380px;
+  text-align: center;
+}
+
+.landing-title {
+  line-height: 1;
+  margin: 9px 0 0 0;
+}
+
+.landing-slogan {
+  margin-top: 9px;
+}
+
+/* ------------------------------------- */
+/*   Review
+/* ------------------------------------- */
+
+.interior {
+  align-items: stretch;
+  background: #f6f7f7;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.interior header,
+.interior footer {
+  background: #281910;
+  padding: 10px;
+  text-align: center;
+}
+
+.interior main {
+  align-self: center;
+  overflow-y: scroll;
+}
+
+.interior h1 {
+  margin: 0;
+}
+
+.disclaimer {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ------------------------------------- */
+/*   Profile
+/* ------------------------------------- */
+
+.profile {
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #e3e7e7;
+  box-shadow: 0 1px 1px #edefef;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.profile-name {
+  color: #281910;
+  font-weight: normal;
+  margin: 0;
+}
+
+.profile-description {
+  font-size: 14px;
+  margin: 5px 0 0 0;
+  max-width: 250px;
+}
+
+.profile-controls {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* ------------------------------------- */
+/*   Control
+/* ------------------------------------- */
+
+.control {
+  background: none;
+  border: 1px solid #e3e7e7;
+  border-radius: 50%;
+  box-shadow: 0 1px 1px #edefef;
+  font-size: 0;
+  height: 70px;
+  width: 70px;
+}
+
+.control + .control {
+  margin-left: 15px;
+}
+
+.control-positive {
+  background: url("../images/icon-positive.png") no-repeat center center / 35px 35px;
+}
+
+.control-info {
+  background: url("../images/icon-information.png") no-repeat center center / 20px 20px;
+  height: 40px;
+  width: 40px;
+}
+
+.control-negative {
+  background: url("../images/icon-negative.png") no-repeat center center / 35px 35px;
+}
