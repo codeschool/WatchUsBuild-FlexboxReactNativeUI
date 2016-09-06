@@ -12,6 +12,7 @@ import { bindActionCreators } from 'redux';
 import * as VillainrActions from './actions';
 
 import { LoginScreen } from './components/login/LoginScreen';
+import { ProfileScreen } from './components/profile/ProfileScreen';
 
 class VillainrApp extends Component {
   render() {
@@ -21,9 +22,11 @@ class VillainrApp extends Component {
       <View style={styles.container}>
         <StatusBar barStyle="light-content" />
 
-        {!auth.isLoggedIn
-          ? <LoginScreen {...this.props} />
-        : <Text>Logged In</Text>}
+        {
+          auth.isLoggedIn
+            ? <ProfileScreen {...this.props} />
+            : <LoginScreen {...this.props} />
+        }
       </View>
     );
   }
