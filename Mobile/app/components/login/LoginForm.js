@@ -10,38 +10,67 @@ import {
   View,
 } from 'react-native';
 
-export function LoginForm() {
-  return (
-    <View style={styles.form}>
-      <Text style={styles.label}>Username</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="konkeror"
-        autoCapitalize="none"
-        keyboardType="email-address"
-      />
+export class LoginForm extends React.Component {
+  constructor() {
+    super();
 
-      <Text style={styles.label}>Password</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="*******"
-        autoCapitalize="none"
-        secureTextEntry={true}
-      />
+    this.state = {
+      username: '',
+      password: '',
+    };
 
-      <View style={styles.buttonWrapper}>
-        <TouchableHighlight
-          style={styles.button}
-          underlayColor="rgb(140, 84, 109)"
-          onPress={() => alert('hello world')}
+    this.doLogin = this.doLogin.bind(this);
+  }
+
+  render() {
+    return (
+      <View style={styles.form}>
+        <Text style={styles.label}>Username</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="konkeror"
+          autoCapitalize="none"
+          keyboardType="email-address"
+          onChangeText={(username) => this.setState({ username })}
+          />
+
+        <Text style={styles.label}>Password</Text>
+        <TextInput
+          style={styles.input}
+          placeholder="*******"
+          autoCapitalize="none"
+          secureTextEntry={true}
+          onChangeText={(password) => this.setState({ password })}
+          />
+
+        <View style={styles.buttonWrapper}>
+
+          {this.props.auth.hasLoginError
+            ? <Text style={styles.errorText}>Invalid username or password</Text>
+            : null}
+
+          <TouchableHighlight
+            style={styles.button}
+            underlayColor="rgb(140, 84, 109)"
+            onPress={this.doLogin}
           >
-          <Text style={styles.buttonText}>Sign In</Text>
-        </TouchableHighlight>
-      </View>
+            <Text style={styles.buttonText}>Sign In</Text>
+          </TouchableHighlight>
 
-      <KeyboardSpacer />
-    </View>
-  );
+        </View>
+
+        <KeyboardSpacer />
+      </View>
+    );
+  }
+
+  doLogin() {
+    const {authClearErrors, doLogin} = this.props.actions;
+    const {username, password} = this.state;
+    
+    authClearErrors();
+    doLogin(username, password);
+  }
 }
 
 const styles = StyleSheet.create({
@@ -74,6 +103,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgb(164, 215, 211)',
     borderRadius: 4,
     marginTop: 20,
+    marginBottom: 20,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -83,5 +113,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: 'American Typewriter',
     fontSize: 18,
+  },
+  errorText: {
+    color: 'rgb(230, 143, 143)',
+    marginTop: 10
   },
 });

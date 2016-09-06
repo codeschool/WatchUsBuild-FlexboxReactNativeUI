@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
-import { VillainrApp } from './app/components/app';
+import { Root } from './app/root';
 
-AppRegistry.registerComponent('Villainr', () => VillainrApp);
+AppRegistry.registerComponent('Villainr', () => Root);

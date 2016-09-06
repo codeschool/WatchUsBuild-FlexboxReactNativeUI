@@ -8,14 +8,14 @@ import {
   View,
 } from 'react-native';
 
-export function LoginScreen() {
+export function LoginScreen(props) {
   return (
     <View style={styles.container}>
       <Image source={require('./img/villainr-brand.png')} style={styles.img} />
       <Text style={styles.title}>Villainr</Text>
       <Text style={styles.subtitle}>Meet diabolical co-conspirators</Text>
 
-      <LoginForm />
+      <LoginForm {...props} />
     </View>
   );
 }
