@@ -22,6 +22,7 @@ export function LoginScreen(props) {
 
 const styles = StyleSheet.create({
   container: {
+    alignItems: 'center'
   },
   img: {
     width: 150,

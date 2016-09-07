@@ -40,6 +40,9 @@ VillainrApp.propTypes = {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#2A1A12',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
   }
 });
 

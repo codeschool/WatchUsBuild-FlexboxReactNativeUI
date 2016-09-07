@@ -24,7 +24,9 @@ export class ProfileScreen extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    paddingTop: 10
+    paddingTop: 10,
+    flex: 1,
+    alignSelf: 'stretch',
   },
   navbar: {
     backgroundColor: '#2A1A12',
@@ -38,8 +40,8 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   body: {
-    backgroundColor: 'rgb(255, 255, 255)',
-    width: 400,
-    padding: 20
+    backgroundColor: '#F6F7F7',
+    padding: 10,
+    flex: 1,
   }
 });

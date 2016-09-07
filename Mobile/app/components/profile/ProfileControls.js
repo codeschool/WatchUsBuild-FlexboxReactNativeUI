@@ -24,7 +24,7 @@ export class ProfileControls extends Component {
           underlayColor="rgb(140, 84, 109)"
           onPress={() => alert('Info')}
         >
-          <Image source={require('./img/icon-information.png')} style={styles.iconImg} />
+          <Image source={require('./img/icon-information.png')} style={[styles.iconImg, styles.iconInfoImg]} />
         </TouchableHighlight>
 
         <TouchableHighlight
@@ -41,6 +41,9 @@ export class ProfileControls extends Component {
 
 const styles = StyleSheet.create({
   controls: {
+    justifyContent: 'center',
+    alignSelf: 'stretch',
+    flexDirection: 'row',
   },
   icon: {
     borderColor: '#E3E7E7',
@@ -50,19 +53,26 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     backgroundColor: '#FFFFFF',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   iconPositive: {
-
+    marginRight: 15,
   },
   iconNegative: {
-
+    marginLeft: 15,
   },
   iconInfo: {
     width: 60,
     height: 60,
+    alignSelf: 'center',
   },
   iconImg: {
     width: 45,
-    height: 45
+    height: 45,
+  },
+  iconInfoImg: {
+    width: 30,
+    height: 30,
   }
 });

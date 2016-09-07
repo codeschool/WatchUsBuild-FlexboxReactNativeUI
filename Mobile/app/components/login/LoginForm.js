@@ -94,6 +94,8 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   buttonWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'center',
   },
   button: {
     height: 40,
@@ -101,10 +103,11 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     marginTop: 20,
     marginBottom: 20,
-    width: 100
+    width: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   buttonText: {
-    textAlign: 'center',
     fontFamily: 'American Typewriter',
     fontSize: 18,
   },
